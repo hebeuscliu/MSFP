@@ -3,6 +3,10 @@
 Code and trained models for:
 
 **MSFP: Multi-Scale Feature Fusion for SND1 Inhibitor Discovery in Breast Cancer**
+Senchen Liu, Changming Sun, Guangjian Ni, Ruibing Chen, Leyi Wei, and Ran Su.
+*J. Chem. Theory Comput.* (submitted)
+
+Corresponding author: Ran Su (ran.su@tju.edu.cn).
 
 MSFP combines a pretrained MTSSMol graph encoder with ECFP4, MACCS, and six
 physicochemical descriptors through a fusion MLP (with SE-Block), evaluated under a
@@ -13,14 +17,9 @@ twelve docking hits are advanced to 100 ns MD and MM-GBSA.
 ## Repository contents
 
 ```
-code/                 MSFP fusion model (Python)
-  run_fusion_v2.py      main entry: train 10-replicate ensemble + score library (--train/--screen)
-  models/fusion_model.py   FusionModel (MTSSMol + ECFP4 + MACCS + 6 physchem + fusion MLP/SE-Block)
-  models/train.py, config.py
-  scripts/scaffold_split.py        scaffold-disjoint K-fold (leakage-free evaluation)
-  scripts/property_matched_sampling.py
-  scripts/analysis.py, extract_features_batch.py, extract_unimol_ft.py
-  (graph/3D features extracted with the public MolCLR/UniMol tools, not vendored here)
+code/                 MSFP fusion model definition (Python)
+  models/fusion_model.py   FusionModel (MTSSMol + ECFP4 + MACCS + 6 physchem + fusion MLP/SE-Block);
+                           load trained checkpoints via build_ablation()
 
 checkpoints/          10 trained fusion_full_rep*.pth -> deployed soft-voting ensemble
 
@@ -37,6 +36,12 @@ The 178 experimentally confirmed positive SND1 inhibitors used for training (SMI
 in Supporting Information Table S5) are deposited on Zenodo:
 <https://doi.org/10.5281/zenodo.21776509>.
 
+Not redistributed here (regeneratable or obtainable upstream):
+- Pretrained UniMol (~16 GB) and MolCLR weights — public upstream repositories.
+- Precomputed feature caches — regeneratable from the training SMILES via the public MolCLR/UniMol tools.
+- The 26,686-molecule screening library — commercial library (TargetMol D7800).
+- Full MD trajectories (~81 GB) — regeneratable from `docking_md/receptor/` + ligand prep (`prep_ligands.py`) +
+  the AMBER MD scripts; per-frame analyses are in `docking_md/results/` and the SI.
 
 ## Dependencies
 
