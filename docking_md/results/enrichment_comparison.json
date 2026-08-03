@@ -1,0 +1,99 @@
+{
+  "design": {
+    "library": "LMD natural-product-like (26686), drug-like pre-filtered 18321",
+    "screen": "MTSSMol+ECFP4+MACCS+desc6 leakage-free fusion (val AUC 0.7605)",
+    "arms": {
+      "bestsingle": "rep2 single-model top100",
+      "ensemble": "10-model averaged top100",
+      "random": "99 random from drug-like pool"
+    },
+    "target": "SND1 (manuscript BC target), fixed main pocket, Vina 1.2.7",
+    "metric": "Vina docking score (kcal/mol, lower=better)",
+    "test": "Mann-Whitney U one-sided (screened < random) + Enrichment Factor"
+  },
+  "distributions": {
+    "bestsingle": {
+      "n": 100,
+      "mean": -7.5191,
+      "median": -7.6295,
+      "min": -9.041,
+      "max": -4.328
+    },
+    "ensemble": {
+      "n": 100,
+      "mean": -7.0934,
+      "median": -7.1965,
+      "min": -9.055,
+      "max": -4.058
+    },
+    "random": {
+      "n": 99,
+      "mean": -6.6236,
+      "median": -6.708,
+      "min": -8.807,
+      "max": -3.922
+    }
+  },
+  "mannwhitney": {
+    "bestsingle_vs_random": {
+      "U": 2277,
+      "p": 2.364132573676973e-11
+    },
+    "ensemble_vs_random": {
+      "U": 3449,
+      "p": 0.00011092088680891301
+    }
+  },
+  "enrichment": [
+    {
+      "thr": -7.5,
+      "screened_hit": 55,
+      "screened_n": 100,
+      "random_hit": 16,
+      "random_n": 99,
+      "EF": 3.403
+    },
+    {
+      "thr": -8.0,
+      "screened_hit": 36,
+      "screened_n": 100,
+      "random_hit": 6,
+      "random_n": 99,
+      "EF": 5.94
+    },
+    {
+      "thr": -8.5,
+      "screened_hit": 12,
+      "screened_n": 100,
+      "random_hit": 2,
+      "random_n": 99,
+      "EF": 5.94
+    }
+  ],
+  "enrichment_ensemble": [
+    {
+      "thr": -7.5,
+      "screened_hit": 39,
+      "screened_n": 100,
+      "random_hit": 16,
+      "random_n": 99,
+      "EF": 2.413
+    },
+    {
+      "thr": -8.0,
+      "screened_hit": 20,
+      "screened_n": 100,
+      "random_hit": 6,
+      "random_n": 99,
+      "EF": 3.3
+    },
+    {
+      "thr": -8.5,
+      "screened_hit": 6,
+      "screened_n": 100,
+      "random_hit": 2,
+      "random_n": 99,
+      "EF": 2.97
+    }
+  ]
+}

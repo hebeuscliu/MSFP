@@ -1,0 +1,201 @@
+{
+  "receptor_ref": "/root/disk1/senchenliu/MSFP-MD-files/9-new/receptor.pdb",
+  "main_cluster": [
+    "9-new",
+    "14-new",
+    "38-new",
+    "48-new",
+    "58-new",
+    "84",
+    "119-new",
+    "9"
+  ],
+  "outliers": [],
+  "center": [
+    47.4215,
+    58.5505,
+    -53.778000000000006
+  ],
+  "size": [
+    30.0,
+    30.0,
+    25.772
+  ],
+  "binding_residues": [
+    {
+      "seqid": 5,
+      "resname": "GLY",
+      "mindist": 2.840556811612822
+    },
+    {
+      "seqid": 6,
+      "resname": "ILE",
+      "mindist": 2.5027606757338994
+    },
+    {
+      "seqid": 19,
+      "resname": "ARG",
+      "mindist": 2.8897809605573923
+    },
+    {
+      "seqid": 20,
+      "resname": "GLY",
+      "mindist": 4.592467855086201
+    },
+    {
+      "seqid": 21,
+      "resname": "GLN",
+      "mindist": 2.411340498560922
+    },
+    {
+      "seqid": 22,
+      "resname": "PRO",
+      "mindist": 2.2465738358665184
+    },
+    {
+      "seqid": 23,
+      "resname": "ARG",
+      "mindist": 3.529052139031103
+    },
+    {
+      "seqid": 24,
+      "resname": "GLY",
+      "mindist": 2.8152458151997966
+    },
+    {
+      "seqid": 25,
+      "resname": "GLY",
+      "mindist": 2.5672438528507526
+    },
+    {
+      "seqid": 26,
+      "resname": "PRO",
+      "mindist": 3.0454459443569153
+    },
+    {
+      "seqid": 27,
+      "resname": "PRO",
+      "mindist": 2.69180497064702
+    },
+    {
+      "seqid": 69,
+      "resname": "GLY",
+      "mindist": 2.3212916662927143
+    },
+    {
+      "seqid": 70,
+      "resname": "LYS",
+      "mindist": 4.385309225128827
+    },
+    {
+      "seqid": 71,
+      "resname": "GLU",
+      "mindist": 2.6352709538110144
+    },
+    {
+      "seqid": 72,
+      "resname": "VAL",
+      "mindist": 4.9938989777527505
+    },
+    {
+      "seqid": 216,
+      "resname": "PHE",
+      "mindist": 3.502734217721922
+    },
+    {
+      "seqid": 218,
+      "resname": "ALA",
+      "mindist": 2.6390915103497226
+    },
+    {
+      "seqid": 219,
+      "resname": "GLU",
+      "mindist": 2.2419270728549594
+    },
+    {
+      "seqid": 220,
+      "resname": "ALA",
+      "mindist": 4.406766955490161
+    },
+    {
+      "seqid": 222,
+      "resname": "PHE",
+      "mindist": 2.2569306591031966
+    },
+    {
+      "seqid": 223,
+      "resname": "PHE",
+      "mindist": 2.2994125336702815
+    },
+    {
+      "seqid": 226,
+      "resname": "SER",
+      "mindist": 2.436108987709706
+    },
+    {
+      "seqid": 227,
+      "resname": "ARG",
+      "mindist": 2.1775796196695105
+    },
+    {
+      "seqid": 228,
+      "resname": "LEU",
+      "mindist": 2.7812373145778153
+    },
+    {
+      "seqid": 231,
+      "resname": "ARG",
+      "mindist": 2.8072060843479245
+    },
+    {
+      "seqid": 251,
+      "resname": "HIS",
+      "mindist": 3.0899110019545883
+    },
+    {
+      "seqid": 253,
+      "resname": "ASN",
+      "mindist": 2.8899378886059126
+    },
+    {
+      "seqid": 254,
+      "resname": "GLY",
+      "mindist": 2.983644415810968
+    },
+    {
+      "seqid": 255,
+      "resname": "ASN",
+      "mindist": 4.185482767853671
+    },
+    {
+      "seqid": 256,
+      "resname": "ILE",
+      "mindist": 3.6489309393300404
+    },
+    {
+      "seqid": 259,
+      "resname": "LEU",
+      "mindist": 2.934884154442893
+    },
+    {
+      "seqid": 263,
+      "resname": "GLU",
+      "mindist": 2.855999649859926
+    },
+    {
+      "seqid": 265,
+      "resname": "PHE",
+      "mindist": 2.634722566039927
+    },
+    {
+      "seqid": 296,
+      "resname": "ARG",
+      "mindist": 2.461798529530803
+    },
+    {
+      "seqid": 299,
+      "resname": "ARG",
+      "mindist": 4.04803532593282
+    }
+  ]
+}

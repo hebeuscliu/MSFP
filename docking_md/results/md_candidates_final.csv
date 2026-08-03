@@ -1,0 +1,13 @@
+idx,name,docking_score,model_score,mw,logp,hbd,hba,rotb,tpsa,smiles
+2732,D7800,-8.888,0.78221905,478.6,4.0,1.0,8.0,4.0,91.5,Cc1ccc(C)c(N2CCN(C(=O)c3ccc(Nc4nc5ccccc5n5nnnc45)cc3)CC2)c1
+6218,D7800,-8.793,0.81068677,487.7,3.78,0.0,7.0,6.0,70.4,Cc1ccc(C)c(N2CCN(C(=O)CCc3c(C)nn(-c4ccc(N5CCCC5)nn4)c3C)CC2)c1
+6117,D7800,-8.681,0.8471029,497.9,4.72,1.0,6.0,3.0,79.2,Cc1nnc(N2CCN(C(=O)Nc3cc(F)ccc3F)CC2)c2nn(-c3ccc(Cl)cc3)c(C)c12
+6115,D7800,-8.476,0.8166874,476.0,4.75,1.0,6.0,3.0,79.2,Cc1ccc(NC(=O)N2CCN(c3nnc(C)c4c(C)n(-c5ccccc5)nc34)CC2)cc1Cl
+3188,D7800,-8.374,0.76605624,436.5,4.35,1.0,3.0,4.0,66.5,Cc1ccc(C)c(NC(=O)c2ccc3c(c2)N(Cc2ccc(F)cc2)C(=O)CS3=O)c1
+2532,D7800,-8.356,0.78797185,487.6,4.6,1.0,6.0,6.0,73.1,Cc1ccc(NC(=O)Cn2c(=O)n(CCc3ccccc3)c(=O)c3c4c(sc32)CCCC4)cc1C
+5614,D7800,-8.339,0.7829407,480.6,4.52,1.0,6.0,4.0,78.0,Cc1cccc(-n2c(=O)c3c(c4cc(C)ccc4n3C)n(CC(=O)Nc3ccc(C)c(C)c3)c2=O)c1
+6754,D7800,-8.235,0.77974546,474.6,4.96,1.0,5.0,4.0,65.5,Cc1ccc(C(=O)N2CCN(c3ccc(F)cc3)CC2)cc1NC(=O)c1nsc2ccccc12
+6046,D7800,-8.233,0.80690944,489.0,4.59,1.0,6.0,4.0,92.3,Cc1cc(C)c(NC(=O)CSc2ncc3c(n2)-c2cc(Cl)ccc2N(C)S3(=O)=O)c(C)c1
+543,D7800,-8.227,0.7804212,488.6,4.99,1.0,6.0,5.0,84.4,Cc1ccc(Nc2nnc(-c3ccc(C)c(S(=O)(=O)N4CCOCC4)c3)c3ccccc23)c(C)c1
+5743,D7800,-8.188,0.78050524,408.9,4.34,1.0,4.0,4.0,67.2,Cc1ccc(NC(=O)c2ccc(CN3C(=O)CCn4nc(C)cc43)cc2)c(Cl)c1
+5738,D7800,-8.179,0.7723267,464.0,4.26,1.0,6.0,7.0,81.8,Cc1ccc(-n2nc3c(=O)n(CCCC(=O)NCc4ccc(Cl)cc4)nc(C)c3c2C)cc1

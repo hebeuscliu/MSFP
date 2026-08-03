@@ -30,7 +30,7 @@ docking_md/           virtual screening -> docking -> MD -> MM-GBSA
 
 The 178 experimentally confirmed positive SND1 inhibitors used for training (SMILES, also
 in Supporting Information Table S5) are deposited on Zenodo:
-<https://doi.org/10.5281/zenodo.21776509>.
+<https://doi.org/10.5281/zenodo.21776508>.
 
 
 ## Dependencies
