@@ -24,7 +24,7 @@ code/                 MSFP fusion model (Python)
   scripts/scaffold_split.py        scaffold-disjoint K-fold (leakage-free evaluation)
   scripts/property_matched_sampling.py
   scripts/analysis.py, extract_features_batch.py, extract_unimol_ft.py
-  features/molclr/, features/unimol/   graph/3D feature extraction (adapted from public MolCLR/UniMol)
+  (graph/3D features extracted with the public MolCLR/UniMol tools, not vendored here)
 
 checkpoints/          10 trained fusion_full_rep*.pth -> deployed soft-voting ensemble
 
@@ -32,7 +32,7 @@ docking_md/           virtual screening -> docking -> MD -> MM-GBSA
   dock.py, prep_ligands.py, analyze_docking.py, select_md_candidates.py   (AutoDock Vina)
   setup_md_systems.py, md/*.sh, analyze_md.py                              (AMBER: tleap/antechamber/pmemd/cpptraj)
   prep_mmpbsa.sh, run_mmpbsa_full.sh, summarize_md_energy.py               (MMPBSA.py)
-  receptor/  ligands/  data/  results/   inputs and result tables
+  receptor/  results/   receptor structure and result tables (ligands/data regeneratable)
 ```
 
 ## Data
@@ -43,9 +43,9 @@ in Supporting Information Table S5) are deposited on Zenodo:
 
 Not redistributed here (regeneratable or obtainable upstream):
 - Pretrained UniMol (~16 GB) and MolCLR weights — public upstream repositories.
-- Precomputed feature caches — regeneratable from the training SMILES + `code/features/`.
+- Precomputed feature caches — regeneratable from the training SMILES via the public MolCLR/UniMol tools.
 - The 26,686-molecule screening library — commercial library (TargetMol D7800).
-- Full MD trajectories (~81 GB) — regeneratable from `docking_md/receptor/` + `ligands/` +
+- Full MD trajectories (~81 GB) — regeneratable from `docking_md/receptor/` + ligand prep (`prep_ligands.py`) +
   the AMBER MD scripts; per-frame analyses are in `docking_md/results/` and the SI.
 
 ## Dependencies
