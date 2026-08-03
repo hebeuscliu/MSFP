@@ -1,2 +1,58 @@
 # MSFP
-The code is coming soon.
+
+Code and trained models for:
+
+**MSFP: Multi-Scale Feature Fusion for SND1 Inhibitor Discovery in Breast Cancer**
+Senchen Liu, Changming Sun, Guangjian Ni, Ruibing Chen, Leyi Wei, and Ran Su.
+*J. Chem. Theory Comput.* (submitted)
+
+Corresponding author: Ran Su (ran.su@tju.edu.cn).
+
+MSFP combines a pretrained MTSSMol graph encoder with ECFP4, MACCS, and six
+physicochemical descriptors through a fusion MLP (with SE-Block), evaluated under a
+scaffold-disjoint (leakage-free) split. The deployed ensemble reaches validation AUC 0.81
+and, after screening and docking against SND1, yields enrichment factors up to 5.9-fold;
+twelve docking hits are advanced to 100 ns MD and MM-GBSA.
+
+## Repository contents
+
+```
+code/                 MSFP fusion model (Python)
+  run_fusion_v2.py      main entry: train 10-replicate ensemble + score library (--train/--screen)
+  models/fusion_model.py   FusionModel (MTSSMol + ECFP4 + MACCS + 6 physchem + fusion MLP/SE-Block)
+  models/train.py, config.py
+  scripts/scaffold_split.py        scaffold-disjoint K-fold (leakage-free evaluation)
+  scripts/property_matched_sampling.py
+  scripts/analysis.py, extract_features_batch.py, extract_unimol_ft.py
+  features/molclr/, features/unimol/   graph/3D feature extraction (adapted from public MolCLR/UniMol)
+
+checkpoints/          10 trained fusion_full_rep*.pth -> deployed soft-voting ensemble
+
+docking_md/           virtual screening -> docking -> MD -> MM-GBSA
+  dock.py, prep_ligands.py, analyze_docking.py, select_md_candidates.py   (AutoDock Vina)
+  setup_md_systems.py, md/*.sh, analyze_md.py                              (AMBER: tleap/antechamber/pmemd/cpptraj)
+  prep_mmpbsa.sh, run_mmpbsa_full.sh, summarize_md_energy.py               (MMPBSA.py)
+  receptor/  ligands/  data/  results/   inputs and result tables
+```
+
+## Data
+
+The 178 experimentally confirmed positive SND1 inhibitors used for training (SMILES, also
+in Supporting Information Table S5) are deposited on Zenodo:
+<https://doi.org/10.5281/zenodo.XXXXXXX> (replace with the deposited DOI).
+
+Not redistributed here (regeneratable or obtainable upstream):
+- Pretrained UniMol (~16 GB) and MolCLR weights — public upstream repositories.
+- Precomputed feature caches — regeneratable from the training SMILES + `code/features/`.
+- The 26,686-molecule screening library — commercial library (TargetMol D7800).
+- Full MD trajectories (~81 GB) — regeneratable from `docking_md/receptor/` + `ligands/` +
+  the AMBER MD scripts; per-frame analyses are in `docking_md/results/` and the SI.
+
+## Dependencies
+
+Python 3.10+, PyTorch, RDKit, scikit-learn, pandas, numpy; AutoDock Vina (docking);
+AMBER (tleap, antechamber, pmemd, cpptraj, MMPBSA.py) for MD and MM-GBSA.
+
+## License
+
+Code: MIT. Trained checkpoints: CC-BY 4.0.
