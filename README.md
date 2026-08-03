@@ -3,10 +3,6 @@
 Code and trained models for:
 
 **MSFP: Multi-Scale Feature Fusion for SND1 Inhibitor Discovery in Breast Cancer**
-Senchen Liu, Changming Sun, Guangjian Ni, Ruibing Chen, Leyi Wei, and Ran Su.
-*J. Chem. Theory Comput.* (submitted)
-
-Corresponding author: Ran Su (ran.su@tju.edu.cn).
 
 MSFP combines a pretrained MTSSMol graph encoder with ECFP4, MACCS, and six
 physicochemical descriptors through a fusion MLP (with SE-Block), evaluated under a
@@ -41,12 +37,6 @@ The 178 experimentally confirmed positive SND1 inhibitors used for training (SMI
 in Supporting Information Table S5) are deposited on Zenodo:
 <https://doi.org/10.5281/zenodo.21776509>.
 
-Not redistributed here (regeneratable or obtainable upstream):
-- Pretrained UniMol (~16 GB) and MolCLR weights — public upstream repositories.
-- Precomputed feature caches — regeneratable from the training SMILES via the public MolCLR/UniMol tools.
-- The 26,686-molecule screening library — commercial library (TargetMol D7800).
-- Full MD trajectories (~81 GB) — regeneratable from `docking_md/receptor/` + ligand prep (`prep_ligands.py`) +
-  the AMBER MD scripts; per-frame analyses are in `docking_md/results/` and the SI.
 
 ## Dependencies
 
